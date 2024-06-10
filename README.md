@@ -1,7 +1,8 @@
 <h2>
-  2_Begineer
+  2_Begineer and 5_Eth_avaxproject1
 </h2>
-<p>This solidity programs aims to create a smart contract and provides some basic functions to mint and burn the tokens and ther volume </p>
+<p>This solidity programs aims to create a smart contract and provides some basic functions to mint and burn the tokens and ther volume.
+While in 5_Eth_avax one we have used 3 different way of handling error which is require ,assert and revert</p>
 
 <h3> Description </h3>
 <p>
