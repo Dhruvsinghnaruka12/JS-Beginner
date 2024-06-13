@@ -2,24 +2,36 @@
 
 pragma solidity ^0.8.7;
 
-contract Project{
-        uint public total_supply;
-   function trials(uint b) public {
-        require(b<=125,"The value given is more than the required maxmium value ");
-          total_supply=b;
-    }
+contract SchoolGradingSystem{
+   uint public marksofsub;
 
-    function addition()public {
-        assert(total_supply<100);
-        total_supply+=90;
-    }
+   function marksnumber(uint c)public{
+    require(c<100,"The marks that is entered is above the maximum marks range");
+    marksofsub=c;
+   }
+         
 
-    function decr()public view returns(uint256 a){
-        if(total_supply>=125){
-            revert("Overflow ");
+   function enteringmarks() public view{
+    assert(marksofsub>35);
+   }
+   
+   function gradingmarks()public view returns (bool,string memory ){
+    if(marksofsub>35){
+        if(marksofsub>90){
+            return(true,"Grade -A");
+        }
+        else if(marksofsub>80){
+            return(true,"Grade-B");
+        }
+        else if(marksofsub>70){
+            return (true,"Grade-C");
         }
         else{
-            return(total_supply);
+            return(true,"Grade-D");
         }
     }
+    else{
+        revert("The person has failed and scored less than 35 masrks");
+    }
+   }
 }
